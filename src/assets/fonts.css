@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Extended-Black';
+    src: url('./fonts/RFDewiExtended-Black.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-BlackItalic';
+    src: url('./fonts/RFDewiExtended-BlackItalic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-Bold';
+    src: url('./fonts/RFDewiExtended-Bold.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-BoldItalic';
+    src: url('./fonts/RFDewiExtended-BoldItalic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-Italic';
+    src: url('./fonts/RFDewiExtended-Italic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-Light';
+    src: url('./fonts/RFDewiExtended-Light.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-LightItalic';
+    src: url('./fonts/RFDewiExtended-LightItalic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-Regular';
+    src: url('./fonts/RFDewiExtended-Regular.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-Semibold';
+    src: url('./fonts/RFDewiExtended-Semibold.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-SemiboldItalic';
+    src: url('./fonts/RFDewiExtended-SemiboldItalic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-ThinItalic';
+    src: url('./fonts/RFDewiExtended-ThinItalic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-Ultrabold';
+    src: url('./fonts/RFDewiExtended-Ultrabold.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-UltraboldItalic';
+    src: url('./fonts/RFDewiExtended-UltraboldItalic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-Ultralight';
+    src: url('./fonts/RFDewiExtended-Ultralight.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Extended-UltralightItalic';
+    src: url('./fonts/RFDewiExtended-UltralightItalic.ttf') format('truetype');
+  }

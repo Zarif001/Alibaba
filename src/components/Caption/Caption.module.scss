@@ -1,0 +1,48 @@
+.caption {
+  margin-top: 150px;
+  .title {
+    color: #340078;
+    font-size: 100px;
+    text-align: center;
+    font-family: "Extended-UltraBold";
+    line-height: 110px;
+    margin-bottom: 46px;
+    span {
+      color: #f50;
+    }
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      font-size: 30px;
+      color: #340078;
+      line-height: 33px;
+      font-family: "Extended-SemiBold";
+      margin-bottom: 30px;
+      padding-left: 10px;
+    }
+    li::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-color: #f50;
+      border-radius: 50%;
+      text-align: start;
+      margin-right: 11px;
+    }
+    .picture {
+      position: relative;
+      width: 508px;
+      display: block;
+    }
+    // .play {
+    //   position: absolute;
+    //   right: 320px;
+    //   width: 50px;
+    // }
+  }
+}

@@ -1,0 +1,33 @@
+.sponsors {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  .box {
+    margin-top: 70px;
+    display: flex;
+
+    .items {
+        margin-right: 10px;
+      width: 320px;
+      border-radius: 35px;
+      border: 0.878px solid #f2f2f2;
+      background: #fff;
+      box-shadow: 0px 9.07073px 45.35367px 0px rgba(52, 0, 120, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        padding-top: 45px;
+      }
+      p {
+        padding: 0 24px 36px 24px;
+        color: #340078;
+        font-family: 'Extended-UltraBold';
+        text-align: center;
+        font-size: 27.212px;
+        line-height: 38px;
+        margin-top: 25px;
+      }
+    }
+  }
+}
