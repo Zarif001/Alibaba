@@ -1,41 +1,112 @@
-.nav{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding-top: 50px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
 
-   .navBox {
-     display: flex;
-     align-items: center;
-   }
-   .line{
+  .navBox {
+    display: flex;
+    align-items: center;
+    img{
+      width: 112px;
+    }
+  }
+  .line {
     height: 32px;
     border-left: 1px solid #000;
     margin: 0 9px;
-   }
-   .links {
-     li{
-        font-family: 'Extended-Regular';
-        font-size: 9px;
-        color: #000;
-        margin-bottom: 3px;
-     }
-   }
-   .button {
+  }
+  .links {
+    li {
+      font-family: "Extended-Regular";
+      font-size: 9px;
+      color: #000;
+      margin-bottom: 3px;
+    }
+  }
+  .button {
     border-radius: 10px;
-    border: 2px solid #F60;
-    font-family:'Extended-SemiBold' ;
+    border: 2px solid #f60;
+    font-family: "Extended-SemiBold";
     padding: 25px 31px;
-    color: #F60;
+    color: #f60;
     font-size: 16px;
     transition: 0.5s;
     cursor: pointer;
-   }
-   .button:nth-of-type(1){
+  }
+  .button:nth-of-type(1) {
     margin-right: 20px;
-   }
-   .button:hover{
+  }
+  .button:hover {
     color: #fff;
-    background: #F60;
-   }
+    background: #f60;
+  }
+}
+@media (max-width: 992px) {
+  .nav {
+    .button {
+      padding: 20px 26px;
+      font-size: 13px;
+    }
+  }
+}
+@media(max-width:767px){
+  .nav{
+    .button{
+      padding: 15px 21px;
+      font-size: 10px;
+    }
+    .links{
+      li{
+        font-size: 8px;
+      }
+    }
+    .navBox {
+      img{
+        width: 75px;
+      }
+    }
+  }
+}
+@media(max-width:567px){
+  .nav{
+    .line{
+      height: 20px;
+    }
+    .button{
+      padding: 8px 14px;
+      font-size: 5px;
+    }
+    .button:nth-of-type(1){
+      margin-right: 10px;
+    }
+    .navBox {
+      img{
+        width: 45px;
+      }
+    }
+    .links{
+      li{
+        font-size: 6px;
+      }
+    }
+  }
+}
+@media(max-width:370px){
+  .nav{
+    .button{
+      padding: 6px 10px;
+      font-size: 4px;
+    }
+    .navBox{
+      img{
+        width: 40px;
+      }
+    }
+    .links{
+      li{
+        font-size: 5px;
+      }
+    }
+  }
 }

@@ -4,7 +4,7 @@ import styles from "./Content.module.scss";
 function Content() {
   return (
     <div className={styles.content}>
-      <div className={styles.shape}>
+      <div className={styles.parent}>
         <div className={styles.box}>
           <h3 className={styles.title}>
             Alibaba.com <br />

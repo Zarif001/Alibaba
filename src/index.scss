@@ -7,4 +7,13 @@
 }
 body{
     background: #F4F9FF;
+    animation: opacity 1s linear;
+}
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
