@@ -115,19 +115,21 @@
   .content{
     .box{
       .title{
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 13px;
+        line-height: 15px;
       }
       .items{
+        padding-bottom: 45px;
         .item{
-          width: 110px;
+          width: 100px;
   
           img{
             width: 40px;
+            padding-top: 25px;
   
           }
           p{
-            font-size: 13px;
+            font-size: 12px;
             padding-bottom:25px ;
           }
         }
