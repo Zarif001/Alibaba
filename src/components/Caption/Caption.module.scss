@@ -151,8 +151,8 @@
     }
     .box{
       p{
-        font-size: 7px;
-        line-height: 9px;
+        font-size: 8px;
+        line-height: 11px;
         margin-bottom: 17px;
       }
       
@@ -169,7 +169,7 @@
     }
   }
 }
-@media(max-width:370px){
+@media(max-width:400px){
   .caption{
     margin-top: 70px;
     .title{
@@ -178,8 +178,8 @@
     }
     .box{
       p{
-        font-size: 6px;
-        line-height: 8px;
+        font-size: 7px;
+        line-height: 9px;
       }
       .picture{
         .spiker{
