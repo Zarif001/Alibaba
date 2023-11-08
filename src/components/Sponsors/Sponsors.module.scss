@@ -7,7 +7,7 @@
     display: flex;
 
     .items {
-        margin-right: 10px;
+      margin-right: 10px;
       width: 320px;
       border-radius: 35px;
       border: 0.878px solid #f2f2f2;
@@ -24,20 +24,62 @@
       p {
         padding: 0 24px 36px 24px;
         color: #340078;
-        font-family: 'Extended-UltraBold';
+        font-family: "Extended-UltraBold";
         text-align: center;
         font-size: 27.212px;
         line-height: 38px;
         margin-top: 25px;
       }
     }
-    .items:hover{
-      width: 400px;
-      p{
+    .items:hover {
+      p {
         font-size: 30px;
       }
-      img{
+      img {
         width: 230px;
+      }
+    }
+  }
+}
+@media (max-width: 1240px) {
+  .sponsors {
+    .box {
+      padding: 0 15px;
+      .items {
+        width: 100%;
+        p {
+          font-size: 23px;
+          line-height: 30px;
+        }
+        img {
+          width: 170px;
+        }
+      }
+      .items:hover{
+        p{
+          font-size: 25px;
+          line-height: 32px;
+        }
+        img{
+          width:185px;
+        }
+      }
+    }
+  }
+}
+@media(max-width:992px){
+  .sponsors{
+    .box{
+      .items{
+        img{
+          width: 120px;
+        }
+        p{
+          font-size: 19px;
+          line-height: 25px;
+          padding: 0 16px 19px 16px;
+        }
+
       }
     }
   }

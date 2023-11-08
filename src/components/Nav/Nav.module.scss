@@ -75,28 +75,28 @@
     }
     .button{
       padding: 9px 15px;
-      font-size: 6px;
+      font-size: 8px;
     }
     .button:nth-of-type(1){
       margin-right: 10px;
     }
     .navBox {
       img{
-        width: 45px;
+        width: 50px;
       }
     }
     .links{
       li{
-        font-size: 6px;
+        font-size: 7px;
       }
     }
   }
 }
-@media(max-width:400px){
+@media(max-width:430px){
   .nav{
     .button{
       padding: 8px 14px;
-      font-size: 5px;
+      font-size: 6px;
     }
     .navBox{
       img{
