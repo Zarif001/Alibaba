@@ -12,15 +12,15 @@ function Content() {
           </h3>
           <div className={styles.items}>
           <div className={styles.item}>
-            <img src="./images/globus.svg" alt="globus  " />
+            <img src="./images/globus.webp" alt="globus" loading="lazy" />
             <p>220 стран <br />и регионов <br />мира</p>
           </div>
           <div className={styles.item}>
-            <img src="./images/cart.svg" alt="cart" />
+            <img src="./images/cart.webp" alt="cart" loading="lazy" />
             <p>280 <br />миллионов покупателей</p>
           </div>
           <div className={styles.item}>
-            <img src="./images/letter.svg" alt="letter" />
+            <img src="./images/letter.webp" alt="letter" loading="lazy" />
             <p>400 тысяч <br />запросов <br /> в день</p>
           </div>
         </div>
