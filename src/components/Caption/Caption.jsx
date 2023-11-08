@@ -18,7 +18,7 @@ function Caption() {
             <img className={styles.spiker} src="./images/spiker.webp" alt="spiker" />
           </div>
           <div>
-        <img className={styles.play} src="./images/play.svg" alt="play" />
+        <img className={styles.play} src="./images/play.webp" alt="play" />
           </div> 
         </div>  
         

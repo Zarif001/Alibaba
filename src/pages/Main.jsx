@@ -10,7 +10,7 @@ function Main() {
     <div>
       {/* <Shape> */}
       <Content />
-      {/* <Sponsors /> */}
+      <Sponsors />
       {/* <Container> */}
         {/* <Info/> */}
       {/* </Container> */}
