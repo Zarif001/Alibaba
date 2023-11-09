@@ -8,13 +8,13 @@ import Suppliers from "../components/Suppliers/Suppliers";
 function Main() {
   return (
     <div>
-      {/* <Shape> */}
+      <Shape>
       <Content />
       <Sponsors />
-      {/* <Container> */}
-        {/* <Info/> */}
-      {/* </Container> */}
-      {/* </Shape> */}
+      <Container>
+        <Info/>
+      </Container>
+      </Shape>
       {/* <Container> */}
       {/* <Suppliers/> */}
       {/* </Container> */}
