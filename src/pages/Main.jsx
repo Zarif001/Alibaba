@@ -15,9 +15,9 @@ function Main() {
         <Info/>
       </Container>
       </Shape>
-      {/* <Container> */}
-      {/* <Suppliers/> */}
-      {/* </Container> */}
+      <Container>
+      <Suppliers/>
+      </Container>
     </div>
   );
 }
