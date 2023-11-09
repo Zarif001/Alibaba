@@ -32,7 +32,7 @@ function Suppliers() {
                 <h5>Verified Supplier</h5>
               </div>
               <div className={styles.line}></div>
-              <button>от 2999 USD в год</button>
+              <button>от 7999 USD в год</button>
             </div>
           </div>
         </div>
