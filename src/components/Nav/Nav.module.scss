@@ -7,8 +7,11 @@
   .navBox {
     display: flex;
     align-items: center;
-    img{
-      width: 112px;
+    .img{
+      width: 87px;
+    }
+    .img:last-child{
+      width: 111px;
     }
   }
   .line {
@@ -69,8 +72,11 @@
       }
     }
     .navBox {
-      img{
-        width: 75px;
+      .img{
+        width: 67px;
+      }
+      .img:last-child{
+        width: 91px;
       }
     }
   }
@@ -88,8 +94,11 @@
       margin-right: 10px;
     }
     .navBox {
-      img{
-        width: 50px;
+      .img{
+        width: 44px;
+      }
+      .img:last-child{
+        width: 68px;
       }
     }
     .links{
@@ -106,8 +115,11 @@
       font-size: 6px;
     }
     .navBox{
-      img{
-        width: 40px;
+      .img{
+        width: 30px;
+      }
+      .img:last-child{
+        width: 54px;
       }
     }
     .links{

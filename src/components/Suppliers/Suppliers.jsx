@@ -28,7 +28,7 @@ function Suppliers() {
             </div>
             <div className={styles.leftBox}>
               <div className={styles.picture}>
-                <img src="./images/verified.webp" alt="verified" />
+                <img src="./images/verified.png" alt="verified" />
                 <h5>Verified Supplier</h5>
               </div>
               <div className={styles.line}></div>
