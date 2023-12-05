@@ -1,7 +1,19 @@
 import React from "react";
-
+import { useState } from "react";
 import styles from "./Suppliers.module.scss";
+import Submit from "../Submit/Submit";
+
 function Suppliers() {
+
+  const [modal, setModal] = useState(false)
+
+  const openModal = () =>{
+    setModal(true)
+  }
+  const closeModal = () =>{
+    setModal(false)
+  }
+
   return (
     <div className={styles.suplliers}>
       <div className={styles.supplier}>
@@ -37,8 +49,13 @@ function Suppliers() {
           </div>
         </div>
         <div className={styles.last}>
-          <button>Зарегистрировать пробный аккаунт</button>
+          <button className={styles.modalB} onClick={openModal}>Зарегистрировать пробный аккаунт</button>
         </div>
+        {
+            modal && (
+              <Submit closeModal={closeModal}  />
+            )
+          }
       </div>
     </div>
   );
