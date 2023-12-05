@@ -8,3 +8,19 @@
 body{
     background-color: #F4F9FF;
 }
+.main{
+    background-image: url('../../public/images/shape.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+.footer{
+    background-image: url('../../public/images/shape2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    margin-top: 150px;
+}
+
