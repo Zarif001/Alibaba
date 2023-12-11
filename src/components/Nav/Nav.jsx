@@ -30,7 +30,7 @@
               </div>
                           <div className={styles.contact}>
                   <a href="/">
-                      <img className={styles.icons} src="./images/tg.svg" alt="telegram" />
+                      <img className={styles.icons} src="./images/tg.png" alt="telegram" />
                   </a>
                   <a href="/">
                       <img className={styles.icons} src="./images/wa.svg" alt="whatsapp" />
