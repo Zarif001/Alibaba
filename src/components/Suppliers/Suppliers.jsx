@@ -2,8 +2,10 @@ import React from "react";
 import { useState } from "react";
 import styles from "./Suppliers.module.scss";
 import Submit from "../Submit/Submit";
+import { useTranslation } from "react-i18next";
 
 function Suppliers() {
+  const {t} = useTranslation('content')
 
   const [modal, setModal] = useState(false)
 
@@ -18,12 +20,12 @@ function Suppliers() {
     <div className={styles.suplliers}>
       <div className={styles.supplier}>
         <div className={styles.textTitle}>
-        <h2 className={styles.title}>Тарифы</h2>
+        <h2 className={styles.title}>{t('supTitle')}</h2>
         </div>
         <div className={styles.items}>
           <div className={styles.caption}>
             <div className={styles.forTitle}>
-              <h4>Для малого бизнеса</h4>
+              <h4>{t('supforTitle')}</h4>
             </div>
             <div className={styles.leftBox}>
               <div className={styles.picture}>
@@ -31,12 +33,12 @@ function Suppliers() {
                 <h5>Gold Supplier</h5>
               </div>
               <div className={styles.line}></div>
-              <button>от 2999 USD в год</button>
+              <button>{t('supPrice')}</button>
             </div>
           </div>
           <div className={styles.caption}>
             <div className={styles.forTitle}>
-              <h4>Для средних и крупных производителей</h4>
+              <h4>{t('supforTitle2')}</h4>
             </div>
             <div className={styles.leftBox}>
               <div className={styles.picture}>
@@ -44,12 +46,12 @@ function Suppliers() {
                 <h5>Verified Supplier</h5>
               </div>
               <div className={styles.line}></div>
-              <button>от 7999 USD в год</button>
+              <button>{t('supPrice2')}</button>
             </div>
           </div>
         </div>
         <div className={styles.last}>
-          <button className={styles.modalB} onClick={openModal}>Зарегистрировать пробный аккаунт</button>
+          <button className={styles.modalB} onClick={openModal}>{t('supLast')}</button>
         </div>
         {
             modal && (

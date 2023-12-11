@@ -2,8 +2,10 @@ import React from "react";
 import styles from "./Submit.module.scss";
 import { useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 function Submit({closeModal}) {
+  const {t, i18n} = useTranslation('content')
   const [messageFormData, setMessageFormData] = useState({
     name: "",
     number: "",
@@ -24,7 +26,13 @@ function Submit({closeModal}) {
       !messageFormData.email ||
       !messageFormData.number 
     ) {
-      setSuccessMessages(["Заполните все обязательные поля", ""]);
+
+      if(i18n === 'ru'){
+        setSuccessMessages(["Заполните все обьязательные поля ", ""]);
+        } else {
+  
+          setSuccessMessages(["Barcha majburiy maydonlarni to'ldiring", ""]);
+        }
       return;
     }
     const { name, number, email, comment } = messageFormData;
@@ -50,7 +58,12 @@ function Submit({closeModal}) {
         comment: "",
       });
 
+      if(i18n === 'ru'){
       setSuccessMessages(["", "Сообщение успешно отправлено"]);
+      } else {
+
+        setSuccessMessages(["", "Murojaat muvaffaqiyatli yuborildi"]);
+      }
     } catch (error) {
       console.warn(error);
     }
@@ -72,10 +85,10 @@ function Submit({closeModal}) {
             </div>
             <img className={styles.close} onClick={closeModal} src="./images/close.svg" alt="close" />
           <form className={styles.form}>
-            <h6>Ваше имя <span>*</span></h6>
+            <h6>{t('subTitle')} <span>*</span></h6>
             <input
               type="text"
-              placeholder="Как к вам обращаться?"
+              placeholder={t('subItem')}
               value={messageFormData.name}
               onChange={(e) =>
                 setMessageFormData({ ...messageFormData, name: e.target.value })
@@ -83,10 +96,10 @@ function Submit({closeModal}) {
               className={styles.nameInput}
               required
             />
-            <h6>Ваша почта<span>*</span></h6>
+            <h6>{t('subTitle2')}<span>*</span></h6>
             <input
               type="text"
-              placeholder="Введите вашу почту"
+              placeholder={t('subItem2')}
               value={messageFormData.email}
               onChange={(e) =>
                 setMessageFormData({
@@ -97,10 +110,10 @@ function Submit({closeModal}) {
               className={styles.nameInput}
               required
             />
-            <h6>Номер телефона<span>*</span></h6>
+            <h6>{t('subTitle3')}<span>*</span></h6>
             <input
               type="number"
-              placeholder="Введите ваш номер телефона"
+              placeholder={t('subItem3')}
               value={messageFormData.number}
               onChange={(e) =>
                 setMessageFormData({
@@ -111,10 +124,10 @@ function Submit({closeModal}) {
               className={styles.nameInput}
               required
             />
-            <h6>Комментарий</h6>
+            <h6>{t('subTitle4')}</h6>
             <input
               type="text"
-              placeholder="Когда с вами удобнее связаться?"
+              placeholder={t('subItem4')}
               value={messageFormData.comment}
               onChange={(e) =>
                 setMessageFormData({
@@ -130,7 +143,7 @@ function Submit({closeModal}) {
               className={styles.button}
               onClick={handleMessageSubmit}
             >
-              Send Message
+              {t('subButton')}
             </button>
             <p
               className={

@@ -42,6 +42,7 @@
           text-align: center;
           padding-bottom: 49px;
           margin-top: 21px;
+          width: 180px;
           font-family: 'Extended-UltraBold';
         }
         img {
@@ -75,6 +76,7 @@
 
           p{
             font-size: 28px;
+            width: 165px;
           }
           img{
             width: 80px;
@@ -116,12 +118,17 @@
     .box{
       max-width: 490px;
       width: 100%;
+      .title{
+        font-size: 17px;
+        line-height: 25px;
+      }
       .items{
         .item{
-          width: 140px;
+          width: 150px;
 
           p{
             font-size: 17px;
+            width: 145px;
           }
           img{
             width: 50px;
@@ -138,15 +145,16 @@
       width: 100%;
 
       .title{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 21px;
       }
       .items{
         .item{
-          width: 110px;
+          width: 120px;
 
           p{
             font-size: 14px;
+            width: 120px;
           }
           img{
             width: 40px;
@@ -168,11 +176,12 @@
       }
       .items{
         .item{
-          width: 90px;
+          width: 95px;
 
           p{
             font-size: 10px;
             padding-bottom: 20px;
+            width: 87px;
           }
           img{
             padding-top: 20px;

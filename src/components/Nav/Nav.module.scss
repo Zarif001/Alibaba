@@ -1,16 +1,26 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 50px;
+  position: fixed;
+  background: #f4f9ff;
+  width: 100%;
+  border-bottom: 1px solid white;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding-bottom: 10px;
 
-  .navBox {
+  .navCaption {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .navBox { 
     display: flex;
     align-items: center;
-    .img{
+    .img {
       width: 87px;
     }
-    .img:last-child{
+    .img:last-child {
       width: 111px;
     }
   }
@@ -31,99 +41,209 @@
     border-radius: 10px;
     border: 2px solid #f60;
     font-family: "Extended-SemiBold";
-    padding: 25px 31px;
     color: #f60;
+    width: 200px;
+    padding: 20px 0;
     font-size: 16px;
     transition: 0.5s;
     cursor: pointer;
   }
-  .button:nth-of-type(1){
+  .button:nth-of-type(1) {
     margin-right: 20px;
   }
   .button:nth-of-type(2) {
     border: 2px solid #340078;
     color: #340078;
   }
-  .button:nth-of-type(2):hover{
+  .button:nth-of-type(2):hover {
     background: #340078;
   }
   .button:hover {
     color: #fff;
     background: #f60;
   }
+  .contact {
+    display: flex;
+    align-items: center;
+
+    .icons {
+      width: 45px;
+      display: block;
+    }
+
+
+    .customSelect {
+      position: relative;
+      display: inline-block;
+
+  
+    }
+
+    .selectButton {
+      appearance: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      
+    }
+
+    .selectButton img {
+      width: 30px; 
+      height: auto;
+    }
+
+    .selectOptions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      padding: 5px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-top: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .customSelect:hover .selectOptions {
+      display: flex;
+    }
+
+    .selectOptions img {
+      width: 30px; 
+      height: auto;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .selectedLanguage img {
+      border: 2px solid #333; 
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
 }
 @media (max-width: 992px) {
   .nav {
     .button {
-      padding: 20px 26px;
-      font-size: 13px;
+      font-size: 10px;
+      width: 135px;
+      padding: 15px 0;
+    }
+    .contact{
+      .icons{
+        width: 35px;
+      }
     }
   }
 }
-@media(max-width:767px){
-  .nav{
-    .button{
-      padding: 15px 21px;
-      font-size: 10px;
+@media (max-width: 767px) {
+  .nav {
+    .button {
+      font-size: 8px;
+      width: 100px;
+      padding: 12px 0;
     }
-    .links{
-      li{
+    .button:nth-of-type(1) {
+      margin-right: 10px;
+    }
+    .links {
+      li {
         font-size: 8px;
       }
     }
     .navBox {
-      .img{
-        width: 67px;
+      .img {
+        width: 65px;
       }
-      .img:last-child{
-        width: 91px;
+      .img:last-child {
+        width: 89px;
+      }
+    }
+    .contact{
+      .icons{
+        width: 27px;
+      }
+      .selectButton img{
+        width: 20px;
+      }
+      .selectOptions img{
+        width: 15px;
       }
     }
   }
 }
-@media(max-width:567px){
-  .nav{
-    .line{
+@media (max-width: 567px) {
+  .nav {
+    .line {
       height: 20px;
     }
-    .button{
-      padding: 9px 15px;
-      font-size: 8px;
+    .button {
+      font-size: 6px;
+      width: 70px;
+      padding: 10px 0;
+      border: 1px solid #f60;
     }
-    .button:nth-of-type(1){
-      margin-right: 10px;
+    .button:nth-of-type(2){
+      border: 1px solid #340078;
     }
     .navBox {
-      .img{
+      .img {
         width: 44px;
       }
-      .img:last-child{
+      .img:last-child {
         width: 68px;
       }
     }
-    .links{
-      li{
+    .links {
+      li {
         font-size: 7px;
+      }
+    }
+    .contact{
+      .icons{
+        width: 20px;
+      }
+      .selectButton img{
+        width: 15px;
+      }
+      .selectOptions img{
+        width: 12px;
       }
     }
   }
 }
-@media(max-width:430px){
-  .nav{
-    .button{
-      padding: 8px 14px;
-      font-size: 6px;
+@media (max-width: 430px) {
+  .nav {
+    .button {
+      font-size: 4px;
+      width: 50px;
+      padding: 7px 0;
     }
-    .navBox{
-      .img{
+    .contact{
+      .icons{
+        width: 15px;
+      }
+      .selectButton img{
+        width: 12px;
+      }
+      .selectOptions img{
+        width: 10px;
+      }
+    }
+    .navBox {
+      .img {
         width: 30px;
       }
-      .img:last-child{
+      .img:last-child {
         width: 54px;
       }
     }
-    .links{
-      li{
+    .links {
+      li {
         font-size: 5px;
       }
     }
