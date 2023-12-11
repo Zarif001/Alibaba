@@ -164,30 +164,3 @@
     }
   }
 }
-@media(max-width:430px){
-  .content{
-    .box{
-      max-width: 300px;
-      width: 100%;
-
-      .title{
-        font-size: 12px;
-        line-height: 16px;
-      }
-      .items{
-        .item{
-          width: 95px;
-
-          p{
-            font-size: 10px;
-            padding-bottom: 20px;
-            width: 87px;
-          }
-          img{
-            padding-top: 20px;
-          }
-        }
-      }
-    }
-  }
-}
