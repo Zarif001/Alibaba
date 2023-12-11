@@ -33,25 +33,25 @@
                       <img className={styles.icons} src="./images/tg.png" alt="telegram" />
                   </a>
                   <a href="/">
-                      <img className={styles.icons} src="./images/wa.svg" alt="whatsapp" />
+                      <img className={styles.icons} src="./images/wa.png" alt="whatsapp" />
                   </a>
                   <a href="/">
-                      <img className={styles.icons} src="./images/call.svg" alt="call-button" />
+                      <img className={styles.icons} src="./images/call.png" alt="call-button" />
                   </a>
                   <div className={styles.customSelect}>
             <button className={styles.selectButton} onClick={() => setShowOptions(!showOptions)}>
-              <img src={`./images/${i18n.language}.svg`} alt={i18n.language} />
+              <img src={`./images/${i18n.language}.png`} alt={i18n.language} />
             </button>
             {showOptions && (
               <div className={styles.selectOptions}>
                 <img
-                  src="./images/ru.svg"
+                  src="./images/ru.png"
                   alt="russia"
                   onClick={() => changeLanguage('ru')}
                   className={i18n.language === 'ru' ? styles.selectedLanguage : ''}
                 />
                 <img
-                  src="./images/uz.svg"
+                  src="./images/uz.png"
                   alt="uzbekistan"
                   onClick={() => changeLanguage('uz')}
                   className={i18n.language === 'uz' ? styles.selectedLanguage : ''}
