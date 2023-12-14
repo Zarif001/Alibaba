@@ -27,10 +27,9 @@ function Submit({closeModal}) {
       !messageFormData.number 
     ) {
 
-      if(i18n === 'ru'){
+      if(i18n.language === 'ru'){
         setSuccessMessages(["Заполните все обьязательные поля ", ""]);
         } else {
-  
           setSuccessMessages(["Barcha majburiy maydonlarni to'ldiring", ""]);
         }
       return;
@@ -58,10 +57,9 @@ function Submit({closeModal}) {
         comment: "",
       });
 
-      if(i18n === 'ru'){
+      if(i18n.language === 'ru'){
       setSuccessMessages(["", "Сообщение успешно отправлено"]);
       } else {
-
         setSuccessMessages(["", "Murojaat muvaffaqiyatli yuborildi"]);
       }
     } catch (error) {
