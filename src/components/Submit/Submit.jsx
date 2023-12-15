@@ -14,9 +14,9 @@ function Submit({closeModal}) {
   });
 
   const [successMessages, setSuccessMessages] = useState(["", ""]);
-  const TOKEN = "6426137624:AAGH6X320yyyy-tGXOpY6WqIQ4UXtxGWlU4";
+  const TOKEN = "6325273862:AAFR0sL8KTODCOG_nN_qEZ8TE5HKjNz_gqU";
   const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-  const CHAT_ID = "680746592";
+  const CHAT_ID = "-1002017614743";
 
   const handleMessageSubmit = async (e) => {
     e.preventDefault();
