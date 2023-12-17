@@ -1,11 +1,11 @@
-import React from "react";
-import styles from "./Submit.module.scss";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styles from "./Submit.module.scss";
 import { useTranslation } from "react-i18next";
 
-function Submit({closeModal}) {
-  const {t, i18n} = useTranslation('content')
+
+function Submit({ closeModal }) {
+  const {t} = useTranslation('content')
   const [messageFormData, setMessageFormData] = useState({
     name: "",
     number: "",
@@ -14,9 +14,23 @@ function Submit({closeModal}) {
   });
 
   const [successMessages, setSuccessMessages] = useState(["", ""]);
-  const TOKEN = "6325273862:AAFR0sL8KTODCOG_nN_qEZ8TE5HKjNz_gqU";
-  const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-  const CHAT_ID = "-1002017614743";
+
+  useEffect(() => {
+    window.roistatVisitCallback = function (visitId) {
+      window.addEventListener("b24:form:init", (event) => {
+        let form = event.detail.object;
+        form.setProperty("roistatID", visitId);
+        form.setProperty("promotion", "trial account");
+      });
+      (function (w, d, u) {
+        var s = d.createElement("script");
+        s.async = true;
+        s.src = u + "?" + (Date.now() / 180000 | 0);
+        var h = d.getElementsByTagName("script")[0];
+        h.parentNode.insertBefore(s, h);
+      })(window, document, "https://cdn-ru.bitrix24.ru/b20141368/crm/form/loader_126.js");
+    };
+  }, []);
 
   const handleMessageSubmit = async (e) => {
     e.preventDefault();
@@ -24,31 +38,31 @@ function Submit({closeModal}) {
     if (
       !messageFormData.name ||
       !messageFormData.email ||
-      !messageFormData.number 
+      !messageFormData.number
     ) {
-
-      if(i18n.language === 'ru'){
-        setSuccessMessages(["Заполните все обьязательные поля ", ""]);
-        } else {
-          setSuccessMessages(["Barcha majburiy maydonlarni to'ldiring", ""]);
-        }
+      setSuccessMessages(["Заполните все обязательные поля", ""]);
       return;
     }
+
     const { name, number, email, comment } = messageFormData;
 
-    const message =
-      `<b>Заявка с сайта(Alibaba)</b>\n` +
-      `<b>Отправитель: </b> ${name}\n` +
-      `<b>Номер: </b> ${number}\n` +
-      `<b>Почта: </b> ${email}\n` +
-      `<b>Комментарий: </b> ${comment}\n`;
+    const formData = new FormData();
+    formData.append("FIELDS[TITLE]", `Новая заявка от ${name}`);
+    formData.append("FIELDS[NAME]", name);
+    formData.append("FIELDS[PHONE][0][VALUE]", number);
+    formData.append("FIELDS[EMAIL][0][VALUE]", email);
+    formData.append("FIELDS[COMMENTS]", comment);
 
     try {
-      const response = await axios.post(URL_API, {
-        chat_id: CHAT_ID,
-        parse_mode: "html",
-        text: message,
-      });
+      const response = await axios.post(
+        "https://ваш_битрикс24.ru/rest/1/ваш_код_авторизации/crm.lead.add.json",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       setMessageFormData({
         name: "",
@@ -57,17 +71,15 @@ function Submit({closeModal}) {
         comment: "",
       });
 
-      if(i18n.language === 'ru'){
-      setSuccessMessages(["", "Сообщение успешно отправлено"]);
-      } else {
-        setSuccessMessages(["", "Murojaat muvaffaqiyatli yuborildi"]);
-      }
+      setSuccessMessages(["", "Заявка успешно отправлена"]);
     } catch (error) {
       console.warn(error);
+      setSuccessMessages(["Произошла ошибка при отправке заявки", ""]);
     }
   };
+
   return (
-    <div className={styles.submit}>
+        <div className={styles.submit}>
       <div className={styles.modalOverlay}>
         <div className={styles.modal}>
             <div className={styles.navBox}>
@@ -159,5 +171,9 @@ function Submit({closeModal}) {
       </div>
     </div>
   );
-}
+
+  }
+
+
 export default Submit;
+
