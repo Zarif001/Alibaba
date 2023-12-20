@@ -4,12 +4,14 @@ import styles from "./Submit.module.scss";
 
 function Submit({ closeModal }) {
   useEffect(() => {
-    window.roistatVisitCallback = function (visitId) {
+     window.roistatVisitCallback = function (visitId) {
       window.addEventListener('b24:form:init', (event) => {
         let form = event.detail.object;
         form.setProperty("roistatID", visitId);
         form.setProperty("promotion", "trial account");
+        
       });
+
 
       (function (w, d, u) {
         var s = d.createElement('script');
