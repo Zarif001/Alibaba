@@ -31,7 +31,7 @@ function Submit({ closeModal }) {
 
           {/* ваша форма  */}
 
-        {/* <script data-b24-form="click/126/w8kvl2" data-skip-moving="true">
+        <script data-b24-form="click/126/w8kvl2" data-skip-moving="true">
   {
     window.roistatVisitCallback = function (visitId) {
         window.addEventListener('b24:form:init', (event) => {
@@ -42,16 +42,10 @@ function Submit({ closeModal }) {
         (function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b20141368/crm/form/loader_126.js');
     }
   }
-</script> */}
-
-{/* Форма взятая с битрикс  */}
-
-<script data-b24-form="inline/3/l2r8q8" data-skip-moving="true">
-{(function(w,d,u){
-var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
-var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-})(window,document,'https://cdn-ru.bitrix24.ru/b27952308/crm/form/loader_3.js')}
 </script>
+
+
+
 
 
 
