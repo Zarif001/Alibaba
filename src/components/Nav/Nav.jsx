@@ -10,6 +10,7 @@
         i18n.changeLanguage(lng);
         setShowOptions(false);
       };
+    
       return(
           <div className={styles.nav}>
             <div className={styles.navCaption}>
