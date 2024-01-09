@@ -4,8 +4,12 @@ import styles from "./Submit.module.scss";
 function Submit({ closeModal }) {
   return (
     <div className={styles.submit}>
-      <div className={styles.modalOverlay} onClick={closeModal}>
+      <div className={styles.modalOverlay} >
         <div className={styles.modal}>
+          <div className={styles.closeImg} onClick={closeModal}>
+          <img src="./images/close.svg" alt="" />
+
+          </div>
           {/* ваша форма  */}
           {/* <script data-b24-form="click/126/w8kvl2" data-skip-moving="true">
             {
